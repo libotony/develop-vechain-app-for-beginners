@@ -1,0 +1,36 @@
+{
+  "name": "develop-vechain-app-for-beginners",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "gsap": "^2.1.0",
+    "hack": "^0.8.1",
+    "highlight.js": "^9.14.2",
+    "reveal.js": "^3.7.0",
+    "typed.js": "^2.0.10",
+    "vue": "^2.6.6"
+  },
+  "devDependencies": {
+    "@vechain/connex": "^1.1.0",
+    "@vue/cli-plugin-typescript": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "imports-loader": "^0.8.0",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
