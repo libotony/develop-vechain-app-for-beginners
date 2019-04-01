@@ -21,4 +21,3 @@ Reveal.initialize({
 
 hljs.initHighlightingOnLoad()
 hljs.registerLanguage('javascript', javascript)
-initTypedJs()

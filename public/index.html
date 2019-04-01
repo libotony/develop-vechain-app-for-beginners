@@ -18,45 +18,180 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <div id="typed-strings">
-          <!-- enter custom text below here -->
-          <h1>Connex.js</h1>
-          <h2>Web3老用户带你致富</h2>
-          <h3>Web3带进门，Connex带你飞</h3>
-          <h3>致敬Web3，但是Web3一定不是最好的</h3>
-          <!-- enter custom text above here -->
-        </div>
-        <span id="typed"></span>
+        <h1>唯链应用开发入门</h1>
+        <br/>
+        <small><s>可能是</s>区块链时代程序员的致富经</small>
       </section>
       <section>
         <section>
-          <h2>Connex是什么</h2>
-          <h4 class="fragment fade-in">前端JavaScript库</h4>
-          <h4 class="fragment fade-in">唯链应用交互标准</h4>
-          <h4 class="fragment fade-in">三通:连通用户、应用、区块链</h4>
+          <h2>目录</h2>
+          <br/>
+          <ul>
+            <li class="fragment fade-in">区块链</li>
+            <li class="fragment fade-in">智能合约</li>
+            <li class="fragment fade-in">唯链应用</li>
+            <li class="fragment fade-in">Sync</li>
+            <li class="fragment fade-in">Connex</li>
+          </ul>
         </section>
       </section>
       <section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 什么是区块链
+          
+          + 价值传输网络
+          + 史上最贵的分布式数据库
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 区块链
+
+          + 比特币(BitCoin)
+          + 加密货币(Crypto Currency)
+          + 去中心化(Decentralized)
+          + 共识机制(Consensus)
+          + 无需信任(TrustLess)
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 数据结构
+
+          + 单向哈希链表
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 密码学
+
+          + 数字签名
+          + 散列函数
+          + 身份
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 去中心化
+
+          + 去中心化 和 分布式 和 中心化
+
+         </textarea>         
+        </section>
+
+      </section>
+
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            ### 什么是智能合约
+            + 如果区块链可以类比为数据库
+            + 那么智能合约就是存储过程
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 智能合约
+
+          + 比特币-转账脚本(P2SH)
+          + 非图灵完备
+          + 以太坊
+          + 图灵完备
+          + 有状态
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 并不智能
+
+          + 可做计算
+          + 可做存储
+          + 上下文有限
+          + 无法获取天气(Oracle)
+          + 对从业人员要求高
+          + 应该叫小程序
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 智能合约的应用
+
+          + 代币
+          + 非同质化代币
+          + 收藏品市场 - CryptoKitty/Comet/X-Node
+          + 去中心化交易所
+          + 游戏
+          + etc
+
+         </textarea>
+        </section>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          # Q&A
+        </textarea>
+      </section>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+          ### DApp or 唯链应用
+
+          + Browser <==> Server
+          + Browser <==> BlockChain
+         </textarea>
+        </section>
         <section>
           <h2>什么是唯链应用</h2>
-          <h4 class="fragment fade-in">这是一个相对狭义的概念</h4>
-          <h4 class="fragment fade-in">WEB Application</h4>
+          <h4 class="fragment fade-in">网页应用</h4>
           <h4 class="fragment fade-in">用户以私钥为身份</h4>
-          <h4 class="fragment fade-in">从区块链获取数据</h4>
-          <h4 class="fragment fade-in">与区块链契合</h4>
+          <h4 class="fragment fade-in">与区块链理念契合</h4>
         </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 问题
+
+          + 如何访问区块链数据
+          + 在网页应用中让用户以私钥参与应用 
+        
+         </textarea>
+        </section>
+        
+        <section data-markdown>
+          <textarea data-template>
+            ## Sync
+
+            图
+            #### 也就是我正在用的浏览器
+            
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 一图胜千言
+
+            ![connex-and-web-container](<%= BASE_URL %>img/connex.png)
+          </textarea>
+        </section>
+
         <section data-markdown id="vechain-apps">
           <textarea data-template>
             ## 唯链小程序们（不完全列表）
 
-            + Connex文档 - https://connex.vecha.in/
             + Insight - https://insight.vecha.in/
             + Inspector - https://inspector.vecha.in/
-            + EnergyStation - https://energy.outofgas.io/ (求赞助)
+            + EnergyStation - https://energy.outofgas.io/ 
             + TokenTransfer - [唯链代币转账神器](https://laalaguer.github.io/vechain-token-transfer/)
-            + Faucet - https://faucet.vecha.in/ (即将上线)
-            + Connex Implementation Test - [这又是一个标准](https://connex-impl-test.vecha.in/)
-            + Connex-Intro - [也就是本应用](https://libotony.github.io/connex-intro/)
+            + Faucet - https://faucet.vecha.in/
+            + AppHub
+            + Env
+            + B32
           </textarea>
         </section>
       </section>
