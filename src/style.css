@@ -19,3 +19,16 @@
     text-overflow:ellipsis;
     white-space: nowrap;
 }
+
+#transfer input{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#transfer .grid p {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

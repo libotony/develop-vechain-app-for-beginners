@@ -407,7 +407,7 @@
         </section>
         <section id="balance-of-app">
           <div id="balance-of" style="width:80%; margin: auto" v-cloak>
-            <h2>查看代币余额</h2>
+            <h3>查看代币余额</h3>
             <p>这是个awesome token</p>
             <button class="btn btn-primary" @click="identAction">告诉我你是谁</button>
             <button class="btn btn-primary" @click="buttonAction">查看余额</button>
@@ -430,33 +430,79 @@
                 <p>{{amount}}</p>
               </div>
             </div>
-            <!-- <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>X-NODE:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{isXNode ? '是' : '否'}}</p>
-              </div>
-            </div>
+            <hr />
+          </div>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### 让用户告诉你他的身份
+            
+            这里有个知识点: CERT
+            ``` javascript
+            const signingService = connex.vendor.sign('cert')
+
+            await signingService.request({
+              purpose: 'identification',
+              payload: {
+                type: 'text',
+                content: 'Connex Intro is requesting your identification'
+              }
+            }).then(result => {
+              // 成功了 更新UI
+              // result: {annex: {signer: ..., ...} signature: ...}
+            }).catch(e => {
+              // 失败了 更新UI
+              console.log('balance-of-identity', e)
+            })
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### 写入区块链 - 转账
+            <br/>
+            ``` javascript
+            // Solidity function balanceOf(address _owner) public view returns(uint256 balance)
+            const contractAddress = '0x0000000000000000000000000000456E65726779'
+            const transferABI = {}
+            const transferMethod = connex.thor.account(contractAddress).method(transferABI)
+            const clause = transferMethod.asClause('0xd3ae78222beadb038203be21ed5ce7c9b1bff602', 1)
+
+            const signingService = connex.vendor.sign('tx')
+            signingService.comment('Transfer token to 0xd3ae78222beadb038203be21ed5ce7c9b1bff602')
+
+            signingService.request([clause]).then(result => {
+              // 成功了 更新UI
+              // result: {signer: ..., signature: ...}
+            }).catch(e => {
+              // 失败了 更新UI
+              console.log('transfer-action', e)
+            })
+            
+            ```
+          </textarea>
+        </section>
+        <section id="transfer-app">
+          <div id="transfer" style="width:80%; margin: auto" v-cloak>
+            <h3>转账</h3>
+            <p>给某人转awesome token</p>
+            <fieldset class="form-group">
+              <input type="text" placeholder="Recipient" class="form-control" v-model="addr">
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="number" placeholder="Amount" class="form-control" v-model="amount">
+            </fieldset>
+            <button class="btn btn-primary" @click="buttonAction">转账</button>
+            <hr />
             <div class="grid">
               <div class="cell -1of12 row-name"></div>
               <div class="cell -2of12 row-name">
-                <p>Message:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{msg}}</p>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>TXID:</p>
+                <p>TX ID:</p>
               </div>
               <div class="cell -9of12 row-value">
                 <p>{{txid}}</p>
               </div>
-            </div> -->
+            </div>
             <hr />
           </div>
         </section>
