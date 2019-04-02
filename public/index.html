@@ -38,7 +38,7 @@
       <section>
         <section data-markdown>
           <textarea data-template>
-          ### 定义区块链
+          ## 定义区块链
           <br/>
 
           + 价值传输网络 <!-- .element: class="fragment fade-in-then-semi-out" -->
@@ -48,7 +48,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 区块链
+          ## 区块链
 
           + 比特币(BitCoin)<!-- .element: class="fragment fade-in" -->
           + 加密货币(Crypto Currency)<!-- .element: class="fragment fade-in" -->
@@ -60,7 +60,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 区块 & 链
+          ## 区块 & 链
 
           ![hash-link-list](<%= BASE_URL %>img/hash-link-list.png)<!-- .element: style="width:70%;background:unset;border:unset" -->
  
@@ -68,7 +68,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 密码学
+          ## 密码学
 
           + 数字签名<!-- .element: class="fragment fade-in" -->
           + 散列函数<!-- .element: class="fragment fade-in" -->
@@ -78,7 +78,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 去中心化
+          ## 去中心化
 
           ![distributed-and-decentralized](<%= BASE_URL %>img/distributed-and-decentralized.jpeg)<!-- .element: class="fragment fade-in" style="width:70%" -->
 
@@ -90,7 +90,7 @@
       <section>
         <section data-markdown>
           <textarea data-template>
-            ### 定义智能合约
+            ## 定义智能合约
             <br/>
             + 如果区块链可以类比为数据库<!-- .element: class="fragment fade-in" -->
             + 那么智能合约就是存储过程<!-- .element: class="fragment fade-in" -->
@@ -98,7 +98,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 智能合约
+          ## 智能合约
           <br/>
           + 比特币的转账脚本<!-- .element: class="fragment fade-in" data-fragment-index="1"-->
           + 非图灵完备<!-- .element: class="fragment fade-in" data-fragment-index="1"-->
@@ -109,7 +109,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 并不智能
+          ## 并不智能
           <br/>
           + 可做计算以及存储<!-- .element: class="fragment fade-in"-->
           + 上下文有限<!-- .element: class="fragment fade-in"-->
@@ -121,7 +121,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 智能合约的应用
+          ## 智能合约的应用
 
           + 代币
           + 非同质化代币
@@ -141,7 +141,7 @@
       <section>
         <section data-markdown>
           <textarea data-template>
-          ### DApp
+          ## DApp
           <br/>
           + Browser <==> Server<!-- .element: class="fragment fade-in-then-out"-->
           + Browser <==> BlockChain<!-- .element: class="fragment fade-in"-->
@@ -158,7 +158,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 问题
+          ## 问题
           <br/>
           + 如何让开发者访问区块链数据
           + 如何让用户以私钥参与应用 
@@ -369,7 +369,7 @@
       </section>
       <section>
         <section>
-          <h1 id="-">还是例子</h1>
+          <h2 id="-">还是例子</h2>
           <p><br></p>
           <ul>
             <li class="fragment fade-in">简单合约应用
@@ -390,7 +390,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-            ### 读一下余额
+            ## 读一下余额
             <br/>
             ``` javascript
             // Solidity function balanceOf(address _owner) public view returns(uint256 balance)
@@ -407,7 +407,7 @@
         </section>
         <section id="balance-of-app">
           <div id="balance-of" style="width:80%; margin: auto" v-cloak>
-            <h3>查看代币余额</h3>
+            <h2>查看代币余额</h2>
             <p>这是个awesome token</p>
             <button class="btn btn-primary" @click="identAction">告诉我你是谁</button>
             <button class="btn btn-primary" @click="buttonAction">查看余额</button>
@@ -435,7 +435,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-            ### 让用户告诉你他的身份
+            ## 让用户告诉你他的身份
             
             这里有个知识点: CERT
             ``` javascript
@@ -459,7 +459,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-            ### 写入区块链 - 转账
+            ## 写入区块链 - 转账
             <br/>
             ``` javascript
             // Solidity function balanceOf(address _owner) public view returns(uint256 balance)
@@ -484,7 +484,7 @@
         </section>
         <section id="transfer-app">
           <div id="transfer" style="width:80%; margin: auto" v-cloak>
-            <h3>转账</h3>
+            <h2>转账</h2>
             <p>给某人转awesome token</p>
             <fieldset class="form-group">
               <input type="text" placeholder="Recipient" class="form-control" v-model="addr">
@@ -506,13 +506,6 @@
             <hr />
           </div>
         </section>
-      </section>
-      <section data-markdown>
-        <textarea data-template>
-          # Q&A
-
-          ![wechat-group](<%= BASE_URL %>img/wechat.jpeg) <!-- .element: style="width:40%;background:unset;border:unset" -->
-        </textarea>
       </section>
       <section>
         <h1>谢谢！</h1>
