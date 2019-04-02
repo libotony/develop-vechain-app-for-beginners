@@ -1,4 +1,4 @@
-// import '@/connex-detect'
+import '@/connex-detect'
 import '@/reveal.config'
 import '@/style.css'
 
