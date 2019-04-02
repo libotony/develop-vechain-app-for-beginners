@@ -141,7 +141,7 @@
       <section>
         <section data-markdown>
           <textarea data-template>
-          ### DApp(唯链应用)
+          ### DApp
           <br/>
           + Browser <==> Server<!-- .element: class="fragment fade-in-then-out"-->
           + Browser <==> BlockChain<!-- .element: class="fragment fade-in"-->
@@ -191,6 +191,15 @@
         </section>
       </section>
       <section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Connex
+
+            + 前端JAVASCRIPT库<!-- .element: class="fragment fade-in"-->
+            + 唯链应用交互标准<!-- .element: class="fragment fade-in"-->
+            + 三通:连通用户、应用、区块链<!-- .element: class="fragment fade-in"-->
+          </textarea>
+        </section>
         <section data-markdown>
           <textarea data-template>
             ## Connex
@@ -335,10 +344,10 @@
 
               ;(async () => {
               const ticker = connex.thor.ticker()
-              for (; ;){
-                await ticker.next()
-                EventBus.dispatchEvent(tickEvent)
-              }
+                for (; ;){
+                  await ticker.next()
+                  EventBus.dispatchEvent(tickEvent)
+                }
               })().catch(e => {
                 console.log('ticker loop error', e)
               })
@@ -357,6 +366,105 @@
 
           </textarea>
         </section>
+      </section>
+      <section>
+        <section>
+          <h1 id="-">还是例子</h1>
+          <p><br></p>
+          <ul>
+            <li class="fragment fade-in">简单合约应用
+            </li>
+            <li class="fragment fade-in">代币合约
+            </li>
+            <li class="fragment fade-in"><code>mapping(address=&gt;uint256)balances</code>
+            </li>
+            <li class="fragment fade-in">方法
+            </li>
+            <li class="fragment fade-in">ABI - 应用程序二进制接口
+            </li>
+            <li class="fragment fade-in">返回值
+            </li>
+            <li class="fragment fade-in">事件&amp;转账
+            </li>
+          </ul>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # 读一下余额
+            <br/>
+            ``` javascript
+            // Solidity function balanceOf(address _owner) public view returns(uint256 balance)
+            const contractAddress = '0x0000000000000000000000000000456E65726779'
+            const balanceOfABI = {}
+            const balanceOfMethod = connex.thor.account(contractAddress).method(balanceOfABI)
+
+            balanceOfMethod.call('0x7567d83b7b8d80addcb281a71d54fc7b3364ffed').then(output=>{
+              console.log(output.decoded.balance)
+              // 更新UI
+            })
+            ```
+          </textarea>
+        </section>
+        <section id="balance-of-app">
+          <div id="balance-of" style="width:80%; margin: auto" v-cloak>
+            <h2>查看代币余额</h2>
+            <p>这是个awesome token</p>
+            <button class="btn btn-primary" @click="identAction">告诉我你是谁</button>
+            <button class="btn btn-primary" @click="buttonAction">查看余额</button>
+            <hr />
+            <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>Identity:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{addr}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>Balance:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{amount}}</p>
+              </div>
+            </div>
+            <!-- <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>X-NODE:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{isXNode ? '是' : '否'}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>Message:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{msg}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>TXID:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{txid}}</p>
+              </div>
+            </div> -->
+            <hr />
+          </div>
+        </section>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          # Q&A
+        </textarea>
       </section>
       <section>
         <h1>谢谢！</h1>

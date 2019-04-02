@@ -9,7 +9,6 @@ new Vue({
     },
     methods: {
         buttonAction() {
-            const connex = window.connex
             const blk = connex.thor.block()
 
             blk.get().then((block) => {

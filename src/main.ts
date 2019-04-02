@@ -9,3 +9,4 @@ Vue.config.productionTip = false
 import '@/apps/fist-seen'
 import '@/apps/get-block'
 import '@/apps/ticker'
+import '@/apps/balance-of'

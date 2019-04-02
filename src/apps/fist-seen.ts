@@ -4,7 +4,6 @@ import Vue from 'vue/dist/vue.common'
 new Vue({
     methods: {
         buttonAction() {
-            const connex = window.connex
             const signingService = connex.vendor.sign('cert')
             signingService.request({
                 purpose: 'identification',
