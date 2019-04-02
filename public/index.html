@@ -193,13 +193,13 @@
       <section>
         <section data-markdown>
           <textarea data-template>
-            ## 一图胜千言
+            ## Connex
 
-            ![connex-and-web-container](<%= BASE_URL %>img/connex.png)
+            ![connex-and-web-container](<%= BASE_URL %>img/connex.png)<!-- .element: style="height:70%;background:unset;border:unset" -->
           </textarea>
         </section>
         <section>
-          <h2 id="connex-overview">Connex Overview</h2>
+          <h2 id="connex-overview">Overview</h2>
           <ul>
             <li class="fragment fade-in" data-fragment-index="1"><strong>Connex.Thor</strong> - 从区块链读的
               <ul class="fragment fade-in" data-fragment-index="3">
@@ -219,14 +219,62 @@
             </li>
           </ul>
         </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 一个例子 - 获取区块
+
+            <br/>
+            ``` javascript
+            const blk=connex.thor.block(1)
+
+            blk.get().then(block=>{
+              console.log(block)
+              更新Block信息到UI上
+            })
+            ```
+            <br/>
+
+          </textarea>
+        </section>
+        <section id="get-block-app">
+          <h2>获取最新区块信息</h2>
+          <div id="get-block" style="width:80%; margin: auto" v-cloak>
+            <hr />
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>Number:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{number}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>Time:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{time}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>TotalScore:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{score}}</p>
+              </div>
+            </div>
+            <hr />
+            <button class="btn btn-primary  btn-ghost btn-block" @click="buttonAction">获取最新区块</button>
+            <div>
+        </section>
       </section>
       <section>
         <section>
           <h2>Ticker</h2>
           <h4 class="fragment fade-in">心跳</h4>
           <h4 class="fragment fade-in">晶振</h4>
-          <h4 class="fragment fade-in">历史的车轮</h4>
-          <h4 class="fragment fade-in">方便开发者</h4>
+          <h4 class="fragment fade-in">方便</h4>
         </section>
         <section data-markdown>
           <textarea data-template>
@@ -309,213 +357,6 @@
 
           </textarea>
         </section>
-      </section>
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-            ## 听说唯链要有开发者大会了
-
-            + 那么票是如何买的呢
-            + 肯定是VET购买咯
-            + 需要做一个买票的应用
-            + 用connex很方便就可以实现
-            + 定价10W VET妥妥的
-
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            ## 先看一眼怎么用
-
-            <br/>
-            ``` javascript
-              const signingService = connex.vendor.sign('tx')
-              signingService
-                .comment('Pay 100,000 VET to buy a ticket')
-
-              signingService.request([{
-                to: '0x7567d83b7b8d80addcb281a71d54fc7b3364ffed',
-                value: '10000000000000000000',
-                data: '0x',
-                comment: 'Transfer 100,000 VET'
-              }]).then(result => {
-                // 成功了 更新UI
-                // result: {signer: ..., signature: ...}
-              }).catch(e => {
-                // 失败了 更新UI
-                console.log('mini-ticket-action', e)
-              })
-            ```
-            <br/>
-
-          </textarea>
-        </section>
-        <section id="mini-ticket-app">
-          <div id="mini-ticket" style="width:80%; margin: auto" v-cloak>
-            <h2>VeChain Summit 2019</h2>
-            <p>这里仿佛有一些介绍</p>
-            <p>中心思想是错过悔一生</p>
-            <button class="btn btn-primary" @click="buttonAction">100,000 VET 买买买</button>
-            <hr />
-            <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>Message:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{msg}}</p>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>TXID:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{txid}}</p>
-              </div>
-            </div>
-            <hr />
-          </div>
-        </section>
-      </section>
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-            ## 这就结束了？
-
-            + 这是一个面向全社区的活动
-            + 仿佛可以给X-NODE一点优惠呢
-            + 那么我可以演示更多的知识点了
-            + 那就给X-NODE打个折吧
-
-          </textarea>
-        </section>
-        <section id="full-ticket-app">
-          <div id="full-ticket" style="width:80%; margin: auto" v-cloak>
-            <h2>VeChain Summit 2019</h2>
-            <p>这里仿佛有一些介绍</p>
-            <p>中心思想是错过悔一生</p>
-            <div class="loading"></div>
-
-            <button class="btn btn-primary" @click="identAction">告诉我你是谁</button>
-            <button class="btn btn-primary" @click="buttonAction" :disabled="addr == '-'">{{isXNode?'80,000':'100,000'}}
-              VET
-              买买买</button>
-            <hr />
-            <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>Identity:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{addr}}</p>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>X-NODE:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{isXNode ? '是' : '否'}}</p>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>Message:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{msg}}</p>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="cell -1of12 row-name"></div>
-              <div class="cell -2of12 row-name">
-                <p>TXID:</p>
-              </div>
-              <div class="cell -9of12 row-value">
-                <p>{{txid}}</p>
-              </div>
-            </div>
-            <hr />
-          </div>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            ## 让用户告诉你他的身份
-            
-            这里有个知识点: CERT
-            ``` javascript
-            const signingService = connex.vendor.sign('cert')
-
-            await signingService.request({
-              purpose: 'identification',
-              payload: {
-                type: 'text',
-                content: 'Connex Intro is requesting your identification'
-              }
-            }).then(result => {
-              // 成功了 更新UI
-              // result: {annex: {signer: ..., ...} signature: ...}
-            }).catch(e => {
-              // 失败了 更新UI
-              console.log('full-ticket-identity', e)
-            })
-            ```
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            ## 如何查询用户是否为X节点
-            
-            这里有个知识点: 调用合约
-            ``` javascript
-            // solidity: function isX(address _target) public view returns(bool)
-            const isXABI = {}
-            const isX = connex.thor.account('0xd4dac3a95c741773F093d59256A21ED6FCc768a7').method(isXABI)
-            isX
-              .call(userAddress) // isX(userAddress)
-              .then(ret=>{
-                // 更新UI
-                // ret: {decoded: {0: true/false, ...}, ...}
-              }).catch(e=>{
-                console.log('Get x-node status failed', e)
-              })
-            ```
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            ## 还有最后一个知识点
-            
-            <br/>
-            ``` javascript
-            const signingService = connex.vendor.sign('tx')
-            signingService
-              .signer(userAddress) // 强制用户地址来签名
-              .comment('Pay 100,000 VET to buy a ticket')
-            ```
-            <br />
-            + 仅做演示，实际并不安全
-          </textarea>
-        </section>
-      </section>
-      <section data-markdown>
-        <textarea data-template>
-
-          + 演示代码都是POC
-          + 仅演示了Connex的部分功能
-          + 我们GitHub见
-          + 欢迎Issue 和 PR 以及 当面交流
-          + 开发者可以带来无限的可能
-
-        </textarea>
-      </section>
-      <section>
-        <p>关于Connex我想说</p>
-        <p><img style="width:50%" src="<%= BASE_URL %>img/panta.jpg" alt="panta"></p>
       </section>
       <section>
         <h1>谢谢！</h1>

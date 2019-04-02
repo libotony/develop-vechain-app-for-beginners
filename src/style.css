@@ -1,3 +1,14 @@
 [v-cloak] {
     display: none;
 }
+
+.row-name,
+.row-value {
+    text-align: left;
+}
+
+#get-block-app .row-value{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
