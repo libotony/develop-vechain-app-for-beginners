@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/develop-vechain-app-for-beginners/favicon-32x32.png">
+  <title>Develop VeChain APPs with Connex</title>
+  <link rel="stylesheet" href="/develop-vechain-app-for-beginners/css/hack.css">
+<link href="/develop-vechain-app-for-beginners/css/app.23df1323.css" rel="preload" as="style"><link href="/develop-vechain-app-for-beginners/css/chunk-vendors.e34a69a8.css" rel="preload" as="style"><link href="/develop-vechain-app-for-beginners/js/app.933aa50b.js" rel="preload" as="script"><link href="/develop-vechain-app-for-beginners/js/chunk-vendors.0e93c16d.js" rel="preload" as="script"><link href="/develop-vechain-app-for-beginners/css/chunk-vendors.e34a69a8.css" rel="stylesheet"><link href="/develop-vechain-app-for-beginners/css/app.23df1323.css" rel="stylesheet"></head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but connex-intro-webpack doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>唯链应用开发入门</h1>
+        <br/>
+        <small><s>可能是</s>区块链时代程序员的致富经</small>
+      </section>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 目录
+            <br/>
+            + 区块链 <!-- .element: class="fragment fade-in" -->
+            + 智能合约<!-- .element: class="fragment fade-in" -->
+            + 唯链应用 <!-- .element: class="fragment fade-in" -->
+            + Sync <!-- .element: class="fragment fade-in" -->
+            + Connex <!-- .element: class="fragment fade-in" -->
+          </textarea>
+        </section>
+      </section>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 定义区块链
+          <br/>
+
+          + 价值传输网络 <!-- .element: class="fragment fade-in-then-semi-out" -->
+          + 密码学工程学和经济学合一的艺术品 <!-- .element: class="fragment fade-in-then-semi-out" -->
+          + 史上最贵的分布式数据库 <!-- .element: class="fragment fade-in" -->
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 区块链
+
+          + 比特币(BitCoin)<!-- .element: class="fragment fade-in" -->
+          + 加密货币(Crypto Currency)<!-- .element: class="fragment fade-in" -->
+          + 去中心化(Decentralized)<!-- .element: class="fragment fade-in" -->
+          + 共识机制(Consensus)<!-- .element: class="fragment fade-in" -->
+          + 无需信任(TrustLess)<!-- .element: class="fragment fade-in" -->
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 区块 & 链
+
+          ![hash-link-list](/develop-vechain-app-for-beginners/img/hash-link-list.png)<!-- .element: style="width:70%;background:unset;border:unset" -->
+ 
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 密码学
+
+          + 数字签名<!-- .element: class="fragment fade-in" -->
+          + 散列函数<!-- .element: class="fragment fade-in" -->
+          + 身份<!-- .element: class="fragment fade-in" -->
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 去中心化
+
+          ![distributed-and-decentralized](/develop-vechain-app-for-beginners/img/distributed-and-decentralized.jpeg)<!-- .element: class="fragment fade-in" style="width:70%" -->
+
+         </textarea>         
+        </section>
+
+      </section>
+
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 定义智能合约
+            <br/>
+            + 如果区块链可以类比为数据库<!-- .element: class="fragment fade-in" -->
+            + 那么智能合约就是存储过程<!-- .element: class="fragment fade-in" -->
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 智能合约
+          <br/>
+          + 比特币的转账脚本<!-- .element: class="fragment fade-in" data-fragment-index="1"-->
+          + 非图灵完备<!-- .element: class="fragment fade-in" data-fragment-index="1"-->
+          + 以太坊<!-- .element: class="fragment fade-in" data-fragment-index="2"-->
+          + 图灵完备<!-- .element: class="fragment fade-in" data-fragment-index="2"-->
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 并不智能
+          <br/>
+          + 可做计算以及存储<!-- .element: class="fragment fade-in"-->
+          + 上下文有限<!-- .element: class="fragment fade-in"-->
+          + 无法获取天气<!-- .element: class="fragment fade-in"-->
+          + 对从业人员要求高<!-- .element: class="fragment fade-in"-->
+          + 应该叫小程序<!-- .element: class="fragment fade-in"-->
+
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 智能合约的应用
+
+          + 代币
+          + 非同质化代币
+          + 收藏品市场
+          + 去中心化交易所
+          + 游戏
+          + etc
+
+         </textarea>
+        </section>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          # Q&A
+        </textarea>
+      </section>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+          ## DApp
+          <br/>
+          + Browser <==> Server<!-- .element: class="fragment fade-in-then-out"-->
+          + Browser <==> BlockChain<!-- .element: class="fragment fade-in"-->
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 什么是唯链应用
+          <br/>
+          + 网页应用<!-- .element: class="fragment fade-in"-->
+          + 用户以私钥为身份<!-- .element: class="fragment fade-in"-->
+          + 区块链理念契合<!-- .element: class="fragment fade-in"-->
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 问题
+          <br/>
+          + 如何让开发者访问区块链数据
+          + 如何让用户以私钥参与应用 
+         </textarea>
+        </section>
+      </section>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+          ## Sync
+
+          ![sync](/develop-vechain-app-for-beginners/img/sync.png)<!-- .element: style="width:70%;background:unset;border:unset" -->
+          </textarea>
+        </section>
+
+        <section id="first-seen">
+          <h2>Sync</h2>
+          <br />
+          <ul>
+            <li class="fragment fade-in">钱包
+            </li>
+            <li class="fragment fade-in">浏览器
+            </li>
+            <li class="fragment fade-in">给开发者提供接口-Connex
+            </li>
+            <li class="fragment fade-in">
+              <button class="btn btn-primary  btn-ghost" @click="buttonAction">证明我在用Sync</button>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Connex
+
+            + 前端JAVASCRIPT库<!-- .element: class="fragment fade-in"-->
+            + 唯链应用交互标准<!-- .element: class="fragment fade-in"-->
+            + 三通:连通用户、应用、区块链<!-- .element: class="fragment fade-in"-->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Connex
+
+            ![connex-and-web-container](/develop-vechain-app-for-beginners/img/connex.png)<!-- .element: style="height:70%;background:unset;border:unset" -->
+          </textarea>
+        </section>
+        <section>
+          <h2 id="connex-overview">Overview</h2>
+          <ul>
+            <li class="fragment fade-in" data-fragment-index="1"><strong>Connex.Thor</strong> - 从区块链读的
+              <ul class="fragment fade-in" data-fragment-index="3">
+                <li>Genesis</li>
+                <li>Status</li>
+                <li>Account &amp; Block &amp; Transaction &amp; Filter</li>
+                <li><span class="fragment highlight-green" data-fragment-index="5">Ticker</span></li>
+                <li><span class="fragment highlight-green" data-fragment-index="5">Explain</span></li>
+              </ul>
+            </li>
+            <li class="fragment fade-in" data-fragment-index="2"><span class="fragment highlight-green"
+                data-fragment-index="5"><strong>Connex.Vendor</strong></span>- 向区块链写的
+              <ul class="fragment fade-in" data-fragment-index="4">
+                <li>TX</li>
+                <li>CERT</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 一个例子 - 获取区块
+
+            <br/>
+            ``` javascript
+            const blk=connex.thor.block(1)
+
+            blk.get().then(block=>{
+              console.log(block)
+              更新Block信息到UI上
+            })
+            ```
+            <br/>
+
+          </textarea>
+        </section>
+        <section id="get-block-app">
+          <h2>获取最新区块信息</h2>
+          <div id="get-block" style="width:80%; margin: auto" v-cloak>
+            <hr />
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>Number:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{number}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>Time:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{time}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>TotalScore:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{score}}</p>
+              </div>
+            </div>
+            <hr />
+            <button class="btn btn-primary  btn-ghost btn-block" @click="buttonAction">获取最新区块</button>
+            <div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Ticker</h2>
+          <h4 class="fragment fade-in">心跳</h4>
+          <h4 class="fragment fade-in">晶振</h4>
+          <h4 class="fragment fade-in">方便</h4>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 先看一眼怎么用
+
+            <br/>
+            ``` javascript
+              const ticker = connex.thor.ticker()
+              ticker.next().then(()=>{
+                console.log('区块链有异动 👀')
+              })
+            ```
+            <br/>
+            
+            + 有了异动我们就可以监视区块链了
+            + 基于这个我们可以做一个Insight
+          </textarea>
+        </section>
+        <section id="ticker-app">
+          <h2>10分钟实现 Insight</h2>
+          <div id="ticker" style="width:80%; margin: auto" v-cloak>
+            <hr />
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>Number:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{number}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>Time:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{time}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -4of12 row-name">
+                <p>TotalScore:</p>
+              </div>
+              <div class="cell -8of12 row-value">
+                <p>{{animatedScore}}</p>
+              </div>
+            </div>
+            <hr />
+            <button class="btn btn-primary  btn-ghost btn-block" @click="buttonAction">{{buttonText}} Tick-Tock</button>
+            <div>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 再看一眼代码
+
+            ``` javascript
+              const EventBus = new EventTarget()
+              const tickEvent = new Event('tick');
+
+              ;(async () => {
+              const ticker = connex.thor.ticker()
+                for (; ;){
+                  await ticker.next()
+                  EventBus.dispatchEvent(tickEvent)
+                }
+              })().catch(e => {
+                console.log('ticker loop error', e)
+              })
+
+              const tickerAction = () => {
+                connex.thor.block().get().then(blk => {
+                  // 拿到blk可以更新UI了
+                }).catch(e => {
+                  // 把错误输出到console也是错误处理:)
+                  console.log(e)
+                })
+              }
+
+              EventBus.addEventListener(tickEvent.type, tickerAction)
+            ```
+
+          </textarea>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2 id="-">还是例子</h2>
+          <p><br></p>
+          <ul>
+            <li class="fragment fade-in">简单合约应用
+            </li>
+            <li class="fragment fade-in">代币合约
+            </li>
+            <li class="fragment fade-in"><code>mapping(address=&gt;uint256)balances</code>
+            </li>
+            <li class="fragment fade-in">方法
+            </li>
+            <li class="fragment fade-in">ABI - 应用程序二进制接口
+            </li>
+            <li class="fragment fade-in">返回值
+            </li>
+            <li class="fragment fade-in">事件&amp;转账
+            </li>
+          </ul>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 读一下余额
+            <br/>
+            ``` javascript
+            // Solidity function balanceOf(address _owner) public view returns(uint256 balance)
+            const contractAddress = '0x0000000000000000000000000000456E65726779'
+            const balanceOfABI = {}
+            const balanceOfMethod = connex.thor.account(contractAddress).method(balanceOfABI)
+
+            balanceOfMethod.call('0x7567d83b7b8d80addcb281a71d54fc7b3364ffed').then(output=>{
+              console.log(output.decoded.balance)
+              // 更新UI
+            })
+            ```
+          </textarea>
+        </section>
+        <section id="balance-of-app">
+          <div id="balance-of" style="width:80%; margin: auto" v-cloak>
+            <h2>查看代币余额</h2>
+            <p>这是个awesome token</p>
+            <button class="btn btn-primary" @click="identAction">告诉我你是谁</button>
+            <button class="btn btn-primary" @click="buttonAction">查看余额</button>
+            <hr />
+            <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>Identity:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{addr}}</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>Balance:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{amount}}</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 让用户告诉你他的身份
+            
+            这里有个知识点: CERT
+            ``` javascript
+            const signingService = connex.vendor.sign('cert')
+
+            await signingService.request({
+              purpose: 'identification',
+              payload: {
+                type: 'text',
+                content: 'Connex Intro is requesting your identification'
+              }
+            }).then(result => {
+              // 成功了 更新UI
+              // result: {annex: {signer: ..., ...} signature: ...}
+            }).catch(e => {
+              // 失败了 更新UI
+              console.log('balance-of-identity', e)
+            })
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 写入区块链 - 转账
+            <br/>
+            ``` javascript
+            // Solidity function balanceOf(address _owner) public view returns(uint256 balance)
+            const contractAddress = '0x0000000000000000000000000000456E65726779'
+            const transferABI = {}
+            const transferMethod = connex.thor.account(contractAddress).method(transferABI)
+            const clause = transferMethod.asClause('0xd3ae78222beadb038203be21ed5ce7c9b1bff602', 1)
+
+            const signingService = connex.vendor.sign('tx')
+            signingService.comment('Transfer token to 0xd3ae78222beadb038203be21ed5ce7c9b1bff602')
+
+            signingService.request([clause]).then(result => {
+              // 成功了 更新UI
+              // result: {signer: ..., signature: ...}
+            }).catch(e => {
+              // 失败了 更新UI
+              console.log('transfer-action', e)
+            })
+            
+            ```
+          </textarea>
+        </section>
+        <section id="transfer-app">
+          <div id="transfer" style="width:80%; margin: auto" v-cloak>
+            <h2>转账</h2>
+            <p>给某人转awesome token</p>
+            <fieldset class="form-group">
+              <input type="text" placeholder="Recipient" class="form-control" v-model="addr">
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="number" placeholder="Amount" class="form-control" v-model="amount">
+            </fieldset>
+            <button class="btn btn-primary" @click="buttonAction">转账</button>
+            <hr />
+            <div class="grid">
+              <div class="cell -1of12 row-name"></div>
+              <div class="cell -2of12 row-name">
+                <p>TX ID:</p>
+              </div>
+              <div class="cell -9of12 row-value">
+                <p>{{txid}}</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </section>
+      </section>
+      <section>
+        <h1>谢谢！</h1>
+      </section>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '/develop-vechain-app-for-beginners/css/print/pdf.css' : '/develop-vechain-app-for-beginners/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+<script type="text/javascript" src="/develop-vechain-app-for-beginners/js/chunk-vendors.0e93c16d.js"></script><script type="text/javascript" src="/develop-vechain-app-for-beginners/js/app.933aa50b.js"></script></body>
+
+</html>
